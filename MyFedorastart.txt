@@ -1,0 +1,29 @@
+# Install Firefox, Bluefish, Mplayer, Audacacious
+    1  su -c 'yum install --nogpgcheck http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/russianfedora-free-release-stable.noarch.rpm http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/russianfedora-nonfree-release-stable.noarch.rpm'
+    2  su -c 'yum install --nogpgcheck http://mirror.yandex.ru/fedora/russianfedora/russianfedora/fixes/fedora/russianfedora-fixes-release-stable.noarch.rpm'
+    3  su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
+    4  yum install firefox.i686
+    5  cp ../../etc/selinux/config ../../etc/selinux/config.old
+    6  yum install bluefish.i686
+    7  bluefish ../../etc/selinux/config
+    8  yum install mplayer xine-lib-extras-nonfree gstreamer-plugins-ugly
+    9  su -c "yum -y install audacious audacious-plugin*"
+    10 rpm -ivh http://rpm.livna.org/livna-release.rpm
+
+
+
+#нуждики для Скайпа: 
+yum install cyrus-sasl-md5
+yum install farsight2
+yum install gssdp
+yum install gupnp
+yum install gupnp-igd
+yum install libnice
+yum install libpurple
+yum install skype
+yum install skype4pidgin
+# для нормальной работы веб-камеры в скайпе
+LD_PRELOAD=/usr/lib/libv4l/v4l1compat.so skype
+
+# обновление
+su -c "yum check-update"
