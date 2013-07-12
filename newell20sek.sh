@@ -14,4 +14,7 @@ i=0
 while [ ""-z ]
 do
  pic
+ #notify-send --urgency normal --expire-time=5000 -i typing-monitor -h int:x:300 -h int:y:500 "changing wallpaper"
+ echo $SECONDS
 done
+
