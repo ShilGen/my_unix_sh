@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright 2013 ShilGen.ru geniusshil@gmail.com 
 function print_help() {
   echo "скрипт запущен без дополнительных параметров."
   echo
@@ -19,3 +20,4 @@ fi
 TIMETOSLEEP=`zenity --scale --title="Сколько еще не спать?" --text='Сколько еще не спать?' --min-value=0 --max-value=60`
 	echo  до выключения компьютера TIMETOSLEEP  ${TIMETOSLEEP} 
 	
+test "root" = "$USER" ; echo $? #если root - 0 , обычный пользователь -1
