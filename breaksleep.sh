@@ -17,8 +17,8 @@ if [[ $ret -eq 2 ]]; then
 fi
 
 case $action in
-    min10*) cmd="sudo shutdown -P +10" ;;
-    min30*) cmd="sudo shutdown -P +30" ;;
+    min10*) cmd="sudo shutdown -k +10" ;;
+    min30*) cmd="sudo shutdown -k +30" ;;
     Cansel*) cmd="sudo shutdown -c" ;;
     Logout*) 
         case $(wmctrl -m | grep Name) in
