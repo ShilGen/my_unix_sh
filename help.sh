@@ -1,6 +1,6 @@
 #!/bin/bash
 function print_help() {
-  echo "Скрипт работы с Webdav"
+  echo "скрипт запущен без дополнительных параметров."
   echo
   echo "Использование: $ME options..."
   echo "Параметры:"
@@ -13,3 +13,9 @@ function print_help() {
 if [ $# = 0 ]; then
   print_help
 fi
+
+
+  #zenity --warning --text='Какой-то текст '
+TIMETOSLEEP=`zenity --scale --title="Сколько еще не спать?" --text='Сколько еще не спать?' --min-value=0 --max-value=60`
+	echo  до выключения компьютера TIMETOSLEEP  ${TIMETOSLEEP} 
+	
